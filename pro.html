@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pro.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="celender">
+      <div class="celender-body">
+        <span class="month-day">month</span>
+        <span class="day-name">day</span>
+        <span class="date-number">00</span>
+        <span class="year">0000</span>
+      </div>
+    </div>
+    <script>
+      const dayNumber = new Date().getDate();
+      const year = new Date().getFullYear();
+      const dayName = new Date().toLocaleDateString("defualt", {
+        weekday: "long",
+      });
+      const monthName = new Date().toLocaleDateString("defualt", {
+        month: "long",
+      });
+      document.querySelector(".month-day").innerHTML = monthName;
+      document.querySelector(".day-name").innerHTML = dayName;
+      document.querySelector(".date-number").innerHTML = dayNumber;
+      document.querySelector(".year").innerHTML = year;
+    </script>
+  </body>
+</html>

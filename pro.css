@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #152c42;
+  min-height: 100vh;
+}
+.celender {
+  width: 260px;
+  position: relative;
+}
+
+.celender::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  box-shadow: 206px 208px #ff00ea, -35px 70px #0084ff;
+  border-radius: 50%;
+  z-index: -1;
+}
+.celender .celender-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 100000;
+  backdrop-filter: blur(15px);
+  border-bottom: 6px solid #ff7b00;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+  border-radius: 8px;
+}
+.month-day {
+  padding: 10px 0;
+  color: #fff;
+  background-color: #ff7b00;
+  width: 100%;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-transform: capitalize;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.day-name{
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 20px;
+    font-size: 30px;
+}
+.date-number{
+    font-weight: 700;
+    font-size:96px;
+    color: #fff;
+    line-height: 1.2em;
+}
+.year{
+    color: #fff;
+    margin: 20px 0;
+    font-size: 15px;
+}
